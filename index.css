@@ -1,0 +1,23 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: whitesmoke;
+}
+.navBar{
+    width: 100%;
+    background-color: rgb(34, 80, 94);
+    color: whitesmoke;
+    padding: 5px;
+}
+#forMultiChoice,#forRadio,#forShortAns{
+    display: none;
+}
+.text-danger{
+    display: block !important;
+    float: none !important;
+    text-align: right;
+}
+#forMulti,#forRad,#forShort,#mainArea{
+    display: none;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/Style/index.css">
+</head>
+<body>
+    <nav class="navBar">
+        <h1 class="text-center text-light p-2">QUIZ APPLICATION</h1>
+    </nav>
+    <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-xs-12" id="mainContent">
+        <h3 class="text-center" style="color: rgb(34, 80, 94); padding: 16px;">Set Questions for Quiz</h3>
+        <div class="formArea">
+            <div class="form-group">
+                <label class="lbl">Number Of Questions</label>
+                <input type="text" placeholder="Enter number of total questions" onkeyup="noOfQueCheck()" onblur="readonly()" id="noOfQue" name="noOfQue" class="form-control">
+                <label class="errorNoOfQue text-danger float-right" id="errorNoOfQue"></label>
+            </div>
+            <div class="form-group">
+                <label class="lbl">Question Type</label>
+                <select name="typeOfQue" id="typeOfQue" onchange="showAmswer();" onblur="typeOfQueCheck();" class="form-control">
+                    <option selected="selected" disabled="disabled" value="0">Select Type of Question</option>
+                    <option value="1">Multi Choice</option>
+                    <option value="2">Radio Button</option>
+                    <option value="3">Short Answer</option>
+                </select>
+                <label class="errorTypeOfQue text-danger float-right" id="errorTypeOfQue"></label>
+            </div>
+            <div class="form-group">
+                <label class="lbl" id="qc">Question No 1</label>
+                <textarea name="queType" id="queType" class="form-control" onblur="queTypeCheck()" rows="5" style="resize: none;"></textarea>
+                <label class="errorQueType text-danger float-right" id="errorQueType"></label>
+            </div>
+            <div class="form-group" id="forMultiChoice">
+                <label class="lbl" id="">Correct Answer</label>
+                <input type="text" placeholder="Enter Correct Answer" id="correctAns" onblur="correctAnsCheck()" name="correctAns" class="form-control">
+                <label class="errorCorrectAns text-danger float-right" id="errorCorrectAns"></label>
+                <label class="lbl">Choise 1</label>
+                <input type="text" placeholder="Enter Choice 1" id="choice1" onblur="choice1Check()" name="choice1" class="form-control">
+                <label class="errorChoice1 text-danger float-right" id="errorChoice1"></label>
+                <label class="lbl">Choise 2</label>
+                <input type="text" placeholder="Enter Choice 2" id="choice2" onblur="choice2Check()" name="choice2" class="form-control">
+                <label class="errorChoice2 text-danger float-right" id="errorChoice2"></label>
+                <label class="lbl">Choise 3</label>
+                <input type="text" placeholder="Enter Choice 3" id="choice3" onblur="choice3Check()" name="choice3" class="form-control">
+                <label class="errorChoice3 text-danger float-right" id="errorChoice3"></label>
+            </div>
+            <div class="form-group" id="forRadio">
+                <label class="lbl">Correct Answer</label>
+                <input type="text" placeholder="Enter True or Fasle " id="true" onblur="trueCheck()"  name="true" class="form-control">
+                <label class="errorTrue text-danger float-right" id="errorTrue"></label>
+            </div>
+            <div class="form-group" id="forShortAns">
+                <label class="lbl">Short Answer</label>
+                <textarea name="shortAns" id="shortAns" class="form-control" onblur="shortAnsCheck()" rows="5" style="resize: none;"></textarea>
+                <label class="errorShortAns text-danger float-right" id="errorShortAns"></label>
+            </div>
+            <div class="form-group">
+                <input type="button" value="Next" id="btnNext" onclick="goNext()" style="width: 20%;" class="btn btn-dark float-right">
+            </div>
+            
+
+            
+        </div>
+    </div>
+    <div id="afterAddQuiz" class="text-center" style="display: none;">
+        <h1 id="heading" class="text-center text-dark p-5">Successfully Added 20 Questions</h1>
+        <input type="button" value="Take Test" class="btn btn-lg btn-outline-info " onclick="tekeQuiz()">
+    </div>
+    
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/Script/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/Style/index.css">
+</head>
+<body>
+    <nav class="navBar">
+        <h1 class="text-center text-light p-2">QUIZ APPLICATION</h1>
+    </nav>
+    <div>
+        <h5 class="text-right p-3" id="totalQue">Total Question 14</h5>
+    </div>
+    <div class="text-center" id="start">
+        <input type="button" value="Start Quiz" class="btn btn-info btn-lg" id="startQuiz" onclick="startQuiz()">
+    </div>
+    <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-sm-8 offset-sm-2 col-xs-12" id="mainArea">
+        <div id="QuestionArea">
+            <h5 id="queNo"></h5>
+            <p id="question"></p>
+        </div>
+        <div id="forMulti">
+            <div class="form-group">
+                <input type="checkbox" id="chkBox1"><label id="lblCheckBox1"></label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="chkBox2"><label id="lblCheckBox2"></label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="chkBox3"><label id="lblCheckBox3"></label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="chkBox4"><label id="lblCheckBox4"></label>
+            </div>
+        </div>
+        <div id="forRad">
+            <div class="form-group">
+                <input type="radio" name="answer" value="true" id="radioTrue"><label for="radioTrue">True</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" name="answer" value="false" id="radioFalse"><label for="radioFalse">False</label>
+            </div>
+        </div>
+        <div id="forShort">
+            <div class="form-group">
+                <textarea name="textShort" id="textShort" rows="5" class="form-control" placeholder="Type Your Answer" style="resize: none;"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="button" value="Next" id="btnNextQue" onclick="nextQue()" class="btn btn-info float-right">
+        </div>
+    </div>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/Script/index.js"></script>
+    <script src="./js/Script/quiz.js"></script>
+</body>
+</html>
